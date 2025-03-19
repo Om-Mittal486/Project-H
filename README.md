@@ -2,7 +2,7 @@
 
 **Genre:** Supernatural Mystery  
 **Engine:** Unity  
-**Developer:** Om Mittal 
+**Developer:** Om Mittal  
 **Status:** In Development  
 
 ## 📖 Overview
