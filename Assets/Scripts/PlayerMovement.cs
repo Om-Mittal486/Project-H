@@ -15,6 +15,10 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController controller;
     private float moveSpeed;
 
+    public float maxStamina = 100f;
+    public float stamina = 100f;
+    public float sprintDrain = 20f;
+    public float sprintRegen = 10f;
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -25,8 +29,18 @@ public class PlayerMovement : MonoBehaviour
     {
         MovePlayer();
         HandleCrouch();
+        RegenerateStamina();
+        MovePlayer();
+        HandleCrouch();
     }
 
+    void RegenerateStamina()
+    {
+        if (!Input.GetKey(KeyCode.LeftShift) || stamina <= 0)
+        {
+            stamina = Mathf.Min(stamina + sprintRegen * Time.deltaTime, maxStamina);
+        }
+    }
     void MovePlayer()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
@@ -35,10 +49,10 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
         controller.Move(move * moveSpeed * Time.deltaTime);
 
-        // Running while standing or crouching
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && stamina > 0)
         {
             moveSpeed = (controller.height < normalHeight) ? crouchRunSpeed : runSpeed;
+            stamina -= sprintDrain * Time.deltaTime;
         }
         else
         {

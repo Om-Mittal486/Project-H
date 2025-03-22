@@ -484,7 +484,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 05185a6cb4dcad44ab2eba7876acbe32, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 963194228}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 05185a6cb4dcad44ab2eba7876acbe32, type: 3}
       insertIndex: -1
@@ -678,7 +681,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1553448244}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -694,6 +697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivity: 2
   playerBody: {fileID: 1553448244}
+  cameraTransform: {fileID: 963194228}
 --- !u!1 &1553448241 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 05185a6cb4dcad44ab2eba7876acbe32, type: 3}
@@ -834,7 +838,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a2a24bdda55cb8546ae8564220d1fdda, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -886,4 +890,3 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 2012747053}
   - {fileID: 5655189}
-  - {fileID: 963194228}
