@@ -5,20 +5,27 @@ public class PlayerMovement : MonoBehaviour
     public float walkSpeed = 5f;
     public float runSpeed = 8f;
     public float crouchSpeed = 2.5f;
-    public float crouchRunSpeed = 4f; // Slow run while crouching
+    public float crouchRunSpeed = 4f;
+
     public float crouchHeight = 1f;
     public float normalHeight = 1.8f;
-    public Transform cameraTransform; // Assign in Inspector
-    public float standCamY = 1.6f;  // Default camera height
-    public float crouchCamY = 0.8f; // Lower camera height
+    public float crouchCenter = 0.485f;
+    public float standCenter = 0.97f;
 
-    private CharacterController controller;
-    private float moveSpeed;
+    public Transform cameraTransform;
+    public float standCamY = 1.6f;
+    public float crouchCamY = 0.8f;
 
     public float maxStamina = 100f;
     public float stamina = 100f;
     public float sprintDrain = 20f;
     public float sprintRegen = 10f;
+
+    private CharacterController controller;
+    private float moveSpeed;
+    private bool isCrouching = false;
+    private bool isSprinting = false;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -27,20 +34,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        MovePlayer();
         HandleCrouch();
+        MovePlayer();
         RegenerateStamina();
-        MovePlayer();
-        HandleCrouch();
     }
 
-    void RegenerateStamina()
-    {
-        if (!Input.GetKey(KeyCode.LeftShift) || stamina <= 0)
-        {
-            stamina = Mathf.Min(stamina + sprintRegen * Time.deltaTime, maxStamina);
-        }
-    }
     void MovePlayer()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
@@ -49,27 +47,47 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
         controller.Move(move * moveSpeed * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.LeftShift) && stamina > 0)
+        if (Input.GetKey(KeyCode.LeftShift) && moveZ > 0 && stamina > 0 && !isCrouching)
         {
-            moveSpeed = (controller.height < normalHeight) ? crouchRunSpeed : runSpeed;
+            moveSpeed = runSpeed;
             stamina -= sprintDrain * Time.deltaTime;
+            isSprinting = true;
+        }
+        else if (isCrouching && Input.GetKey(KeyCode.LeftShift) && stamina > 0)
+        {
+            moveSpeed = crouchRunSpeed;
+            stamina -= sprintDrain * Time.deltaTime;
+            isSprinting = true;
         }
         else
         {
-            moveSpeed = (controller.height < normalHeight) ? crouchSpeed : walkSpeed;
+            moveSpeed = isCrouching ? crouchSpeed : walkSpeed;
+            isSprinting = false;
         }
     }
 
     void HandleCrouch()
     {
-        bool isHoldingCrouch = Input.GetKey(KeyCode.LeftControl); // Check if holding Ctrl
+        bool isHoldingCrouch = Input.GetKey(KeyCode.LeftControl);
+        isCrouching = isHoldingCrouch;
 
-        // Smooth height transition
-        controller.height = Mathf.Lerp(controller.height, isHoldingCrouch ? crouchHeight : normalHeight, Time.deltaTime * 10f);
+        float targetHeight = isCrouching ? crouchHeight : normalHeight;
+        float targetCenter = isCrouching ? crouchCenter : standCenter;
+        float targetCamY = isCrouching ? crouchCamY : standCamY;
 
-        // Smooth camera transition
+        controller.height = Mathf.Lerp(controller.height, targetHeight, Time.deltaTime * 10f);
+        controller.center = new Vector3(controller.center.x, Mathf.Lerp(controller.center.y, targetCenter, Time.deltaTime * 10f), controller.center.z);
+
         Vector3 camPosition = cameraTransform.localPosition;
-        camPosition.y = Mathf.Lerp(camPosition.y, isHoldingCrouch ? crouchCamY : standCamY, Time.deltaTime * 10f);
+        camPosition.y = Mathf.Lerp(camPosition.y, targetCamY, Time.deltaTime * 10f);
         cameraTransform.localPosition = camPosition;
+    }
+
+    void RegenerateStamina()
+    {
+        if (!isSprinting)
+        {
+            stamina = Mathf.Min(stamina + sprintRegen * Time.deltaTime, maxStamina);
+        }
     }
 }

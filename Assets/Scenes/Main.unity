@@ -437,7 +437,7 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 05185a6cb4dcad44ab2eba7876acbe32, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9100000, guid: 31de11e780bf1b34e86c5cb83673ea67, type: 2}
     - target: {fileID: 5866666021909216657, guid: 05185a6cb4dcad44ab2eba7876acbe32, type: 3}
       propertyPath: m_WarningMessage
       value: 
@@ -719,12 +719,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29392a3179a998645875fa907495f7cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 5
-  runSpeed: 8
-  crouchSpeed: 2
-  crouchRunSpeed: 4
+  walkSpeed: 2
+  runSpeed: 4
+  crouchSpeed: 1
+  crouchRunSpeed: 2.5
   crouchHeight: 1
   normalHeight: 1.8
+  crouchCenter: 0.485
+  standCenter: 0.97
   cameraTransform: {fileID: 963194228}
   standCamY: 1.6
   crouchCamY: 0.8
@@ -751,7 +753,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1.75
+  m_Height: 1.8
   m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
