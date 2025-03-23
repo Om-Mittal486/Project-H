@@ -20,7 +20,7 @@ public class FirstPersonCamera : MonoBehaviour
 
         // Rotate camera up/down
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 60f); // Prevent looking too far up/down
+        xRotation = Mathf.Clamp(xRotation, -90f, 50f); // Prevent looking too far up/down
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
         // Rotate player left/right

@@ -8,9 +8,9 @@ public class PlayerMovement : MonoBehaviour
     public float crouchRunSpeed = 4f;
 
     public float crouchHeight = 1f;
-    public float normalHeight = 1.8f;
-    public float crouchCenter = 0.485f;
-    public float standCenter = 0.97f;
+    public float normalHeight = 1.65f;
+    public float crouchCenter = 0.4f;
+    public float standCenter = 0.825f;
 
     public Transform cameraTransform;
     public float standCamY = 1.6f;
@@ -21,10 +21,15 @@ public class PlayerMovement : MonoBehaviour
     public float sprintDrain = 20f;
     public float sprintRegen = 10f;
 
+    public float gravity = -9.81f;  // Gravity force
+    public float groundCheckDistance = 0f;  // Distance to check if grounded
+
     private CharacterController controller;
     private float moveSpeed;
     private bool isCrouching = false;
     private bool isSprinting = false;
+    private Vector3 velocity;
+    private bool isGrounded;
 
     void Start()
     {
@@ -36,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     {
         HandleCrouch();
         MovePlayer();
+        ApplyGravity();
         RegenerateStamina();
     }
 
@@ -64,6 +70,19 @@ public class PlayerMovement : MonoBehaviour
             moveSpeed = isCrouching ? crouchSpeed : walkSpeed;
             isSprinting = false;
         }
+    }
+
+    void ApplyGravity()
+    {
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance);
+
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f; // Small offset to keep player grounded
+        }
+
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
     }
 
     void HandleCrouch()

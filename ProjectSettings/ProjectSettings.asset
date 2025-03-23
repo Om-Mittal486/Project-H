@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: a4e52dea7155a6143bd30d1771814e47
+  productGUID: ef138b40a859a084fa0c34aa8d75ab58
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Project_H
+  productName: My project (10)
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -678,14 +678,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Project_H
+  metroPackageName: My project (10)
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Project_H
+  metroApplicationDescription: My project (10)
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -755,10 +755,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 10f166a2-b210-40a5-b3c6-36e27833e892
+  cloudProjectId: 31d6b040-51b2-438f-8e99-c8374df160b3
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Project_H
+  projectName: My project (10)
   organizationId: lucifer4806mittal
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
