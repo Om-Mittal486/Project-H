@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "O:\\Hack9\\Project-H\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB18B566-0416-4836-250C-03341678917E}|Assembly-CSharp.csproj|o:\\hack9\\project-h\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB18B566-0416-4836-250C-03341678917E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FB18B566-0416-4836-250C-03341678917E}|Assembly-CSharp.csproj|O:\\Hack9\\Project-H\\assets\\scripts\\firstpersoncamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB18B566-0416-4836-250C-03341678917E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\firstpersoncamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB18B566-0416-4836-250C-03341678917E}|Assembly-CSharp.csproj|o:\\hack9\\project-h\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB18B566-0416-4836-250C-03341678917E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FirstPersonCamera.cs",
               "DocumentMoniker": "O:\\Hack9\\Project-H\\Assets\\Scripts\\FirstPersonCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FirstPersonCamera.cs",
               "ToolTip": "O:\\Hack9\\Project-H\\Assets\\Scripts\\FirstPersonCamera.cs",
               "RelativeToolTip": "Assets\\Scripts\\FirstPersonCamera.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAYwB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T23:07:21.002Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "O:\\Hack9\\Project-H\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
               "ToolTip": "O:\\Hack9\\Project-H\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAYwF0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAYwHAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T23:07:11.551Z",
               "EditorCaption": ""
