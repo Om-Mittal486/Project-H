@@ -1,13 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "O:\\Hack9\\Project-H\\",
+  "WorkspaceRootPath": "O:\\Clones\\Project-H\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB18B566-0416-4836-250C-03341678917E}|Assembly-CSharp.csproj|O:\\Hack9\\Project-H\\assets\\scripts\\firstpersoncamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FB18B566-0416-4836-250C-03341678917E}|Assembly-CSharp.csproj|o:\\clones\\project-h\\assets\\scripts\\blink_check.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB18B566-0416-4836-250C-03341678917E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\blink_check.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB18B566-0416-4836-250C-03341678917E}|Assembly-CSharp.csproj|o:\\clones\\project-h\\assets\\scripts\\firstpersoncamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB18B566-0416-4836-250C-03341678917E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\firstpersoncamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB18B566-0416-4836-250C-03341678917E}|Assembly-CSharp.csproj|o:\\hack9\\project-h\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FB18B566-0416-4836-250C-03341678917E}|Assembly-CSharp.csproj|O:\\Clones\\Project-H\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB18B566-0416-4836-250C-03341678917E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -23,10 +27,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Blink_Check.cs",
+              "DocumentMoniker": "O:\\Clones\\Project-H\\Assets\\Scripts\\Blink_Check.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Blink_Check.cs",
+              "ToolTip": "O:\\Clones\\Project-H\\Assets\\Scripts\\Blink_Check.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Blink_Check.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T16:54:25.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FirstPersonCamera.cs",
-              "DocumentMoniker": "O:\\Hack9\\Project-H\\Assets\\Scripts\\FirstPersonCamera.cs",
+              "DocumentMoniker": "O:\\Clones\\Project-H\\Assets\\Scripts\\FirstPersonCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FirstPersonCamera.cs",
-              "ToolTip": "O:\\Hack9\\Project-H\\Assets\\Scripts\\FirstPersonCamera.cs",
+              "ToolTip": "O:\\Clones\\Project-H\\Assets\\Scripts\\FirstPersonCamera.cs",
               "RelativeToolTip": "Assets\\Scripts\\FirstPersonCamera.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBYAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -35,16 +52,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PlayerMovement.cs",
-              "DocumentMoniker": "O:\\Hack9\\Project-H\\Assets\\Scripts\\PlayerMovement.cs",
+              "DocumentMoniker": "O:\\Clones\\Project-H\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
-              "ToolTip": "O:\\Hack9\\Project-H\\Assets\\Scripts\\PlayerMovement.cs",
+              "ToolTip": "O:\\Clones\\Project-H\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwHAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T23:07:11.551Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T23:07:11.551Z"
             }
           ]
         }

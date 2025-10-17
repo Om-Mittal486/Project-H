@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\FirstPersonCamera.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Blink_Check.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
